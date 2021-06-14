@@ -49,7 +49,7 @@ static void ibv_add_one(struct ib_device *device)
 	if (device == NULL)
 		printk(KERN_CRIT "%s device NULL\n", __func__);
 
-	ctx_pd = ib_alloc_pd(device);
+	ctx_pd = ibv_alloc_pd(device);
 	if (!ctx_pd) {
 		printk(KERN_ALERT "Couldn't allocate PD\n");
 	}
